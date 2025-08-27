@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/horaire.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/galerie.css">
+    <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="entete">
+        <header>
+            <!-- 
+                Pour crééer rapidement un logo
+                https://www.canva.com/templates/?query=logo  
+            -->
+            <a href="#accueil">
+            <img class="logo" src="Images/Logo/ov.png" alt="ov">
+            </a>
+            <h1 class="titre">Motiv-true</h1>
+            <!-- https://svgbox.net/ -->
+            <!--
+                id peut être utilisée une seule fois dans le document
+                La même classe  peut être utiliser plusieurs fois 
+            -->
+            <input type="checkbox" id="chk_burger">
+            <label id="burger" for="chk_burger">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-2" width="32" height="32">
+                <img src="https://s2.svgbox.net/octicons.svg?ic=x-bold" width="32" height="32">
+            </label>
+            <nav class="navigation">
+                <a href="#accueil">Accueil</a>
+                <a href="#inscription">Inscription</a>
+                <a href="#horaire">Horaire</a>
+                <a href="#articles">Articles</a>
+                <a href="#galeriemedias">Galerie des médias</a>
+                <form class="recherche">
+                    <code>&#128270;</code>
+                    <input type="text" placeholder="Recherche">
+                </form>
+            </nav>
+        </header> 
+    </div> <!-- fin #entete -->
+
+   <div id="accueil">
+    <section >
+        <h2>Accueil</h2>
+            <ul>
+                <li>Auteur: Olivier Vernet</li><br>
+                <li>Cours: 582-1W1 - Mise en page Web</li><br>
+                <li>Formation: Technique d'intégration multimédia</li><br>
+                <li>Établissement: Collège de Maisonneuve</li><br>
+                <li>
+                    Adresse Github-page:
+                    <a href="https://github.com/netoli/1w1">netoli</a>
+                </li><br>
+                <li>Session: Automne 2023</li>
+            </ul>
+    </section>
+   </div> <!-- fin #accueil -->
+
+    <div id="inscription">
+    <section>  
+        <h2>Inscription</h2>
+        <!-- https://www.w3schools.com/html/html_forms.asp -->
+         <form action="" class="formulaire">
+            <input type="text" placeholder="Nom">
+            <input type="text" placeholder="Prénom">
+
+           <fieldset class="langage">
+            <legend>Langage</legend>
+            <label for="chk__html">HTML<input id="chk__html" type="checkbox"  id=""></label>
+            <label for="chk__css">CSS<input type="checkbox"  id=""></label>
+            <label for="chk__js">JS<input type="checkbox"  id=""></label>
+            <label for="chk__php">PHP<input type="checkbox"  id=""></label>
+            <label for="chk__mysql">MySQL<input type="checkbox"  id=""></label>
+            <label for="chk__wordpress">Wordpress<input type="checkbox"  id=""></label>
+            </fieldset>
+
+            <fieldset class="age">
+            <!-- Pour les radio bouton on créé un groupe en utilisant
+                 la même valeur pour l'attribut name  -->
+            <legend>Âge</legend>
+            <label for="rad__1">11-15</label>
+            <input type="radio" name="age" id="rad__1">
+            <label for="rad__2">16-20</label>
+            <input type="radio" name="age" id="rad__2">
+            <label for="rad__3">21-25</label>
+            <input type="radio" name="age" id="rad__3">
+            </fieldset>
+
+            <fieldset class="programmeur">
+                <legend>Fonction</legend>
+                <label for="rad__1">Front-end</label>
+                <input type="radio" name="programmeur" id="prog__1">
+                <label for="rad__2">Back-end</label>
+                <input type="radio" name="programmeur" id="prog__2">
+                <label for="rad__3">Full Stack</label>
+                <input type="radio" name="programmeur" id="prog__3">
+            </fieldset>
+
+            <input type="text" id="utilisateur" name="utilisateur" placeholder="Nom d'utilisateur">
+            <input type="password" id="mdp" name="mdp" placeholder="Mot de passe">
+            <input type="submit" value="Soumettre">
+            <input type="reset" value="Réinitialiser">
+        </form>
+    </section>
+    </div> <!--fin #inscription-->
+
+    <div id="horaire">
+        <section>
+        <h2>Horaire</h2>
+            <table id="semainecours">
+            <caption>Horaire du 11 au 15</caption>
+            <thead>
+                <tr>
+                    <th class="th1"></th>
+                    <th class="th2">Lun. 11 déc</th>
+                    <th class="th3">Mar. 12 déc</th>
+                    <th class="th4">Mer. 13 déc</th>
+                    <th class="th5">Jeu. 14 déc</th>
+                    <th class="th6">Ven. 15 déc</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <ul>
+                            <li>08:10</li><br>
+                            <li>09:00</li>
+                        </ul>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="td1" rowspan="2">
+                        <pre>
+        Mise en page Web
+        582-1W1-MA gr.00004
+        Local B1152    Labo
+        Eddy Martin
+        Présentiel
+                        </pre>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                        <th>
+                            <ul>
+                                <li>09:10</li><br>
+                                <li>10:00</li>
+                            </ul>
+                        </th>
+                        <td class="td2" rowspan="3">
+                            <pre>
+        Mise en page Web
+        582-1W1-MA gr.00004
+        Local B1152    Théorie
+        Eddy Martin
+        Présentie
+                            </pre>
+                        </td>
+                        <td class="td3" rowspan="3">
+                            <pre>
+        Conception graphique
+        582-1M2-MA gr.00001
+        Local B1165    Labo
+        Dominic Girard
+        Présentie
+                            </pre>
+                        </td>
+                        <td></td>
+                        <td rowspan=""></td>    
+                </tr>
+                
+                <tr>
+                        <th>
+                            <ul>
+                                <li>10:10</li><br>
+                                <li>11:00</li>
+                            </ul>
+                        </th>
+                        <td></td>
+                        <td></td>
+                        <td class="td4" rowspan="2">
+                            <pre>
+        Création vidéo 
+        582-1M1-MA gr.00003
+        Local B1153    Labo
+        Simon Côté-Bouchard
+        Présentie
+                            </pre>
+                        </td>    
+                </tr>
+        
+                <tr>
+                        <th>
+                            <ul>
+                                <li>11:10</li><br>
+                                <li>12:00</li>
+                            </ul>
+                        </th>
+                        <td></td>
+                        <td></td>
+                </tr>
+                    
+                <tr>
+                        <th>
+                            <ul>
+                                <li>12:10</li><br>
+                                <li>13:00</li>
+                            </ul>
+                        </th>
+                        <td></td>
+                        <td class="td5" rowspan="2">
+                            <pre class="mardi">
+        Activités communes
+                            </pre>
+                        </td>
+                        <td></td>
+                        <td class="td6" rowspan="2">
+                            <pre class="jeudi">
+        Activités pédagogiques
+                            </pre>
+                        </td>
+                        <td></td>  
+                </tr>
+        
+                <tr>
+                    <th>
+                        <ul>
+                            <li>13:10</li><br>
+                            <li>14:00</li>
+                        </ul>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                </tr>
+        
+                <tr>
+                <th>
+                    <ul>
+                        <li>14:10</li><br>
+                        <li>15:00</li>
+                    </ul>
+                </th>
+                <td></td>
+                <td></td>
+                <td class="td7" rowspan="3">
+                    <pre>
+        Création vidéo
+        582-1M1-MA gr.00003
+        Local B1153    Théorie
+        Simon Côté-Bouchard
+        Présentiel
+                    </pre>
+                </td>
+                <td class="td8" rowspan="3">
+                    <pre>
+        Conception graphique
+        582-1M2-MA gr.00001
+        Local B1165    Théorie
+        Dominic Girard
+        Présentiel
+                    </pre>
+                </td>
+                <td></td>  
+                </tr>
+        
+                <tr>
+                    <th>
+                        <ul>
+                            <li>15:10</li><br>
+                            <li>16:00</li>
+                        </ul>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                </tr>
+        
+                <tr>
+                <th>
+                    <ul>
+                        <li>16:10</li><br>
+                        <li>17:00</li>
+                    </ul>
+                </th>
+                <td></td>
+                <td></td>
+                <td></td> 
+                </tr>
+        
+                <tr>
+                    <th>
+                        <ul>
+                            <li>17:10</li><br>
+                            <li>18:00</li>
+                        </ul>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <td>
+                        <h3 class="nbr">
+                            Nombre d'heure de cours:
+                        </h3>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <h3 class="nbr">
+                        17 heures
+                        </h3>
+                    </td>  
+                </tr>
+            </tfoot>
+            </table>
+        </section>
+    </div><!-- fin #horaire -->
+
+   <div id="articles">
+    <section >
+        <h2>Articles</h2>
+        <h3>Définition de la motivation</h3>
+
+    <div class="defmotiv">
+        <img src="Images/Galerie/article1.jpg" alt="journal">
+        <p>
+                La motivation pourrait se définir comme une force intérieure qui nous pousse à agir. 
+                Diriger adéquatement et maintenir cette énergie nous permet d’accomplir nos tâches au travail. 
+                Une motivation de qualité repose sur trois grands piliers, indique Stéphanie Austin, professeure titulaire en comportement organisationnel et directrice du Laboratoire de recherche interdisciplinaire sur les processus motivationnels à l’Université du Québec à Trois-Rivières. 
+                «Selon la théorie de l’autodétermination, trois besoins fondamentaux doivent être comblés. 
+                En premier lieu, celui de l’appartenance ou de l’affiliation sociale à son équipe et à son organisation. 
+                En second lieu, le sentiment de compétence dans la réalisation des activités et la certitude d’apporter une contribution significative, donnant ainsi un sens au travail. 
+                Enfin l’autonomie, c’est-à-dire la perception que l’on bénéficie d’une certaine flexibilité ou de liberté dans l’accomplissement du travail», énumère la professeure. 
+                Sans surprise, la crise sanitaire est venue ébranler ces piliers et compliquer la tâche des gestionnaires qui ont dû, à distance, trouver des façons de rallumer l’étincelle chez leurs équipes.
+        </p>
+    </div>
+    <div class="defmotiv">
+        <img src="Images/Galerie/article.jpg" alt="journal">
+        <p>
+                La motivation pourrait se définir comme une force intérieure qui nous pousse à agir. 
+                Diriger adéquatement et maintenir cette énergie nous permet d’accomplir nos tâches au travail. 
+                Une motivation de qualité repose sur trois grands piliers, indique Stéphanie Austin, professeure titulaire en comportement organisationnel et directrice du Laboratoire de recherche interdisciplinaire sur les processus motivationnels à l’Université du Québec à Trois-Rivières. 
+                «Selon la théorie de l’autodétermination, trois besoins fondamentaux doivent être comblés. 
+                En premier lieu, celui de l’appartenance ou de l’affiliation sociale à son équipe et à son organisation. 
+                En second lieu, le sentiment de compétence dans la réalisation des activités et la certitude d’apporter une contribution significative, donnant ainsi un sens au travail. 
+                Enfin l’autonomie, c’est-à-dire la perception que l’on bénéficie d’une certaine flexibilité ou de liberté dans l’accomplissement du travail», énumère la professeure. 
+                Sans surprise, la crise sanitaire est venue ébranler ces piliers et compliquer la tâche des gestionnaires qui ont dû, à distance, trouver des façons de rallumer l’étincelle chez leurs équipes.
+        </p>
+    </div>
+    </section>
+   </div> <!-- fin #articles -->
+
+   <div id="galeriemedias">
+    <section>
+    <h2>Galerie des médias</h2>
+    <section class="mesimages">
+        <div class="boiteimage">
+            <div class="image">
+              <img src="Images/Galerie/1.jpg" alt="Ampoule">
+            </div>
+            <div class="description">
+                <h3>
+                    Allumez votre ampoule intérieure <br><span>Lumière</span>
+                </h3>
+            </div>
+          </div>
+
+          <div class="boiteimage">
+            <div class="image">
+              <img src="Images/Galerie/2.jpg" alt="Fleur">
+            </div>
+            <div class="description">
+                <h3>
+                    Faites fleurir votre fleur intérieure <br><span>Bouquet</span>
+                </h3>
+            </div>
+          </div>
+
+          <div class="boiteimage">
+            <div class="image">
+              <img src="Images/Galerie/3.png" alt="Astronaute">
+            </div>
+            <div class="description">
+                <h3>
+                    Enfilez votre combinaison de voyage <br><span>Espace</span>
+                </h3>
+            </div>
+          </div>
+
+          <div class="boiteimage">
+            <div class="image">
+              <img src="Images/Galerie/4.jpg" alt="Ampoule">
+            </div>
+            <div class="description">
+                <h3>
+                    Ouvez votre portail intérieur <br><span>Voyager</span>
+                </h3>
+            </div>
+          </div>
+    </section>
+    <section class="mavideo">
+        <div class="video">
+              <video controls src="Vidéos/5.mp4" type="video/mp4"></video>
+            <div class="description">L'intersection de la vie</div>
+          </div>
+
+          <div class="video">
+              <video controls src="Vidéos/6.mp4" type="video/mp4"></video>
+            <div class="description">L'intersection nocturne de la vie</div>
+          </div>
+    </section>
+</section>
+   </div> <!-- fin #galerie -->
+
+   <div id="piedpage"> 
+   <footer>
+            <section id="sectionbarre">
+                <div class="barre">
+                <figure>
+                    <img id="stat" src="Images/stat.png" alt="Statistique">
+                </figure>
+                </div>
+
+                <div class="barre">
+                <figure>
+                    <img id="etoile" src="Images/etoile.png" alt="Étoile">
+                </figure>
+                </div>
+
+                <div class="barre">
+                <fieldset>
+                    <legend>Commentaires:</legend>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </fieldset>
+                </div>
+            </section>
+            <hr>
+    <section id="sectionpied">
+        <div id="sectionlogo">
+        <div id="sectionaccueillogo">
+            <a href="#accueil">
+            <img class="logo" src="Images/Logo/ov.png" alt="ov">
+            </a>
+        </div>
+        <div id="sectioninfolettre">
+            <form action="" class="infolettre">
+                <label for="email">Demande d'informations</label>
+                <input type="email" name="adressecourriel" placeholder="Courriel">
+                <textarea name="message" id="message" cols="40" rows="5" placeholder="Entrer votre message ici"></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+        </div>
+
+        <div class="sociaux">
+            <h2>Médias sociaux</h2>
+            <div id="mediasociaux">
+            <figure ><img class="icone" src="Images/Réseaux sociaux/instagram.png" alt="intagram"></figure>
+            <figure ><img class="icone" src="Images/Réseaux sociaux/facebook.png" alt="facebook"></figure>
+            <figure ><img class="icone" src="Images/Réseaux sociaux/whatsapp.png" alt="whatsapp"></figure>
+            <figure ><img class="icone" src="Images/Réseaux sociaux/twitter.png" alt="twitter"></figure>
+            </div>
+            <div class="adresse">
+                <label for="address">Adresse sociale</label><hr>
+                <address>
+                    A-8958 rue Primot
+                    Saint-Léonard, Qc
+                    Ca, H7N 5Y6
+                </address>
+            </div>
+        </div>
+
+        <div class="communaute">
+            <h2>Communauté</h2>
+            <a href="#blog">Blog</a>
+            <a href="#notrecommunaute">Communauté</a>
+            <a href="#nosidees">Idées</a>
+            <a href="#nosprojets">Projets</a>
+        </div>
+
+        <div class="compagnie">
+            <h2>Compagnie</h2>
+            <a href="#apropos">A propos</a>
+            <a href="#equipe">Notre équipe</a>
+            <a href="#adresses">Adresses</a>
+            <a href="#medias">Nos médias</a>
+            <a href="#partenaires">Nos partenaires</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </section>
+    <h5>Avis de confidentialité | Privacy Notice</h5>
+    </footer> 
+   </div><!-- fin #piedpage -->
+</body>
+</html>

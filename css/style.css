@@ -1,0 +1,239 @@
+* {
+    margin : 0;
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/*  la balise body est le conteneur principal
+     flexbox dont les enfants s'afficheront sur une colonne
+     flex-direction : column;
+*/     
+/*Body = le corps de la page*/
+body{
+    display : flex;
+    flex-direction:column;
+}
+body > div {
+display: flex;
+justify-content: center;
+}
+
+body > div > section,
+body > div > footer,
+body > div > header {
+    flex: 1 1 1100px;
+    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+}
+
+body > div > section {
+    padding-top : 20px;
+    min-height : 100vh;
+}
+
+/*L'entête de la page*/
+body>div:nth-of-type(1){
+    background-image: url(../Images/Background/Entete/Entête.jpg);
+    position : sticky;
+    top : 0;
+    border-radius: 10px;
+}
+body > div > header{
+    display: flex;
+    position : relative;
+    justify-content: space-between;
+    align-items: center;
+}
+#entete{
+background-position: center;
+background-size: cover;
+z-index: 1;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    border: 1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 50px;
+    mix-blend-mode: multiply;
+}
+.logo:hover{
+    mix-blend-mode:luminosity;
+}
+.lelogo{
+    display: flex;
+    flex-direction: column;
+}
+.titre{
+    font-size: 75px;
+    font-family:'Nova Square', sans-serif;
+    margin: 0;
+    text-shadow: 5px 5px 9px white;
+}
+.titre:hover{
+    color: crimson;
+}
+
+/*Pied de page*/
+#piedpage{
+    justify-content: space-around;
+    background-image:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.5)
+    ), url(../Images/Background/Entete/Entête.jpg);
+}
+#piedpage h2{
+    font-size: max(20px, 1.5vw);
+}
+#sectionbarre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.barre legend{
+    background-color:transparent;
+    font-size: 20px;
+}
+.barre figure{
+    mix-blend-mode: multiply;
+}
+.barre fieldset{
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    overflow-wrap: break-word;
+    border-color: white;
+}
+.barre p{
+    color: black;
+    font-size: max(15px, 1vw);
+    width: 30vw;
+}
+.adresse hr{
+    margin-bottom: 10px;
+}
+#sectionlogo .infolettre{
+    display: flex;
+    flex-direction: column;
+}
+#sectionlogo a{
+    object-fit: cover;
+}
+#sectionaccueillogo{
+    width: 80px;
+}
+label{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family:'Raleway', sans-serif ;
+    text-align: center;
+}
+.infolettre input[type="email"]{
+    background-color: rgba(255, 255, 255, 0.500);
+    font-size: max(15px, 0.5vw);
+    padding: 3px;
+    border: none;
+}
+.sociaux input[type="address"]{
+    background-color: rgba(255, 255, 255, 0.500);
+    font-size: max(15px, 0.5vw);
+    padding: 3px;
+    border: none;
+}
+.infolettre input[type="submit"]{
+    background-color: rgba(255, 255, 255, 0.550);
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 9px black;
+    margin: 10px;
+}
+#stat {
+    width: clamp(120px, 50vw, 240px);
+    height: clamp(60px, 50vh, 120px);
+}
+#sectionpied{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+h5{
+    color: white;
+    font-size: 15px;
+    margin: 10px;
+    text-align: right;
+}
+.infolettre textarea{
+    background-color: rgba(255, 255, 255, 0.700);
+}
+.sociaux{
+    display: flex;
+    flex-direction: column;
+}
+.adresse{
+    width: 165px;
+    margin-top: 50px;
+    font-size: 20px;
+    color: white;
+}
+#mediasociaux{
+    display: flex;
+}
+#mediasociaux figure{
+    margin-right: 15px;
+    cursor: pointer;
+}
+#mediasociaux img{
+    height: 32px;
+    width: 32px;
+    filter: blur(1px);
+}
+#mediasociaux img:hover{
+    filter:contrast(150%);
+}
+.communaute{
+    display: flex;
+    flex-direction: column;
+}
+.compagnie{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+#piedpage a:hover{
+    color: crimson;
+}
+
+/*
+opérateur de sélection « > » permet de sélectionner
+ l'enfant direct de la balise qui précède le «>»
+ La différence entre « > » et « » c'est que plus grand permet de sélectionner
+ l'enfant direct et « » permet de sélectionner l'enfant l'arrière petite enfant et ainsi de suite.
+
+ Le « > » est plus spécifique que l'aopérateur « »
+*/
+
+/*
+ C'est toujours le dernier élément de la suite qui est sélectionné. 
+ Et c'est sur cet élément qu'on applique la règle de style
+*/
+
+/* Entete */
+

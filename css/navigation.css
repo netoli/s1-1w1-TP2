@@ -1,0 +1,76 @@
+.navigation {
+    display: flex;
+    position: absolute;
+    top : 0;
+    right : 0;
+   background-color:rgba(255, 255, 255, 0.250);
+   border-radius: 5px;
+   gap: 5px;
+   padding: 10px;
+   flex-direction: column;
+   width: 300px;
+   /*
+   top: 
+   bottom:
+   position:
+   */
+
+   transform : translateY(-200%);
+   transition : transform .25s;
+}
+#burger {
+    display: flex;
+}
+#burger img {
+    position : absolute;
+    top:0;
+    right:0; 
+    z-index: 100;
+}
+#burger img:nth-of-type(1){
+    display: block;
+}
+#burger img:nth-of-type(2){
+    display : none;
+} 
+.navigation a {
+    color : #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navigation a:hover{
+    color: white;
+}
+/* pour rendre la case à cocher invisible */
+#chk_burger {
+    display : none; 
+}
+/*
+https://www.w3schools.com/cssref/css_selectors.php
+
+
+opérateur de sélection
+epace « »  main div (permet de sélectionner tous les div inclus dans main)
+plus grand « > »  main > div (permet de sélectionner tous les div qui ont comme parent direct main )
+plus « + » main + p (permet de sélectionner le premier «p» situé après la balise main)
+vague « ~ » main ~ p (permet de sélectionner tous les «p» situés apre`s main)
+*/
+
+/*
+si la case à côcher #chk_burger est côché alors on sélectionne le conteneur .navigation.
+La règle de style formatera .navigation
+*/
+
+#chk_burger:checked  ~ .navigation {
+    transform : translateY(0); 
+}
+#chk_burger:checked ~ #burger img:nth-of-type(1){
+    display: none;
+}
+#chk_burger:checked  ~ #burger img:nth-of-type(2){
+    display: block;
+}
+/* référence des fonctions CSS 
+https://css-tricks.com/complete-guide-to-css-functions/
+*/
+

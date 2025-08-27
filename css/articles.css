@@ -1,0 +1,60 @@
+/*Article*/
+body>div:nth-of-type(5){
+    background-image:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.5)
+    ), url(../Images/Background/Article/Article.png);
+    border-radius: 5px;
+}
+#articles{
+    flex-direction: row;
+}
+#articles h2{
+    font-size: max(60px, 4vw);
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+    text-shadow: 5px 5px 9px black; 
+}
+#articles h3{
+    font-size:max(30px, 2vw);
+    text-shadow: 5px 5px 9px white; 
+}
+#articles section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.defmotiv p{
+    font-size: clamp(1rem, 0.1rem + 1.2vw, 1.2rem);
+    flex: 1 1 580px;
+    color: white;
+    text-shadow: 5px 5px 9px black;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 45vw;
+}
+.defmotiv{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: wrap;
+    flex: 0 1 350px;
+}
+.defmotiv img{ 
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 30px;
+}
+.defmotiv:nth-of-type(even) p{
+    order: -1;  
+  }
+.defmotiv:nth-of-type(even)  img{
+     transform : rotate(-10deg); 
+  }
+.defmotiv:nth-of-type(odd)  img{
+      transform : rotate(10deg); 
+  }
+  

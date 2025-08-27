@@ -1,0 +1,140 @@
+/*Galerie de médias*/
+body>div:nth-of-type(6){
+    background-image:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.5)
+    ), url(../Images/Background/Galerie/galerie.png);
+}
+#galeriemedias h2{
+    display: flex;
+    font-size: max(60px, 4vw);
+    color: white;
+    justify-content: space-around;
+    text-shadow: 5px 5px 9px black;
+}
+#galeriemedias{
+    flex-direction: row;
+}
+#galeriemedias section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mesimages{
+    padding-bottom: 50px;
+}
+.boiteimage{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+    background: #060c21;
+    transition: .3s;
+    border-radius: 25px;
+}
+.boiteimage:hover{
+    height: 400px;
+}
+.boiteimage .image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.boiteimage .image img{
+    width: 300px;
+    opacity: 0.3;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+.boiteimage:hover .image img{opacity: 1;}
+.boiteimage:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+}
+.boiteimage:after{
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    filter: blur(10px);
+}
+.boiteimage:before,
+.boiteimage:after{
+    background: linear-gradient(225deg, #89ff00,#010615,#00bcd4);
+    border-radius: 25px;
+}
+.boiteimage:nth-child(2):before,
+.boiteimage:nth-child(2):after{
+    background: linear-gradient(225deg, #ff005e,#010615,#fbff00);
+    border-radius: 25px;
+}
+.boiteimage:nth-child(3):before,
+.boiteimage:nth-child(3):after{
+    background: linear-gradient(225deg, #dd6300,#010615,#2196f3);
+    border-radius: 25px;
+}
+.boiteimage:nth-child(4):before,.boiteimage:nth-child(4):after{
+    background: linear-gradient(225deg, #E75A7C, #010615, #7AE7C7);
+    border-radius: 25px;
+}
+.boiteimage .description{
+    position: absolute;
+    bottom: 10px;
+    top: 300px;
+    left: 10px;
+    right: 10px;
+    height: 90px;
+    background: rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: .2s;
+}
+.boiteimage:hover .description{
+    opacity: 1;
+}
+.boiteimage .description h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.boiteimage .description h3 span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+.mavideo{
+    padding-bottom: 50px;
+}
+.video{
+    margin: 20px;
+    width: 480px;
+  }
+.video video{
+    width: 100%;
+    height: auto;
+}
+.video .description{
+    font-size: 25px;
+    color: white;
+}
