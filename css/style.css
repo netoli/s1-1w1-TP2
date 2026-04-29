@@ -324,20 +324,25 @@ main > section h3 {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--sp-3);
+    gap: 0;
     background: var(--c-card);
     border: 1px solid var(--c-border);
     border-radius: var(--radius-md);
-    padding: var(--sp-6);
+    padding: var(--sp-3) var(--sp-6);
     box-shadow: var(--shadow-sm);
-    max-width: 720px;
+    max-width: 760px;
 }
 
 .liste-accueil li {
-    padding: var(--sp-3);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: var(--sp-4);
+    align-items: baseline;
+    padding: var(--sp-4) 0;
     border-bottom: 1px solid var(--c-border);
-    color: var(--c-text-muted);
+    color: var(--c-text);
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 .liste-accueil li:last-child {
@@ -347,9 +352,9 @@ main > section h3 {
 .liste-accueil li strong {
     color: var(--c-primary);
     font-weight: 600;
-    min-width: 140px;
-    display: inline-block;
-    margin-right: var(--sp-3);
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
 }
 
 .liste-accueil li a {
@@ -357,6 +362,14 @@ main > section h3 {
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 3px;
+    word-break: break-word;
+}
+
+@media (max-width: 560px) {
+    .liste-accueil li {
+        grid-template-columns: 1fr;
+        gap: var(--sp-1);
+    }
 }
 
 /* ============================== Inscription =========================== */
@@ -995,14 +1008,6 @@ main > section h3 {
 
     #articles .defmotiv img {
         aspect-ratio: 1 / 1;
-    }
-
-    .liste-accueil {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .liste-accueil li:last-child {
-        grid-column: span 2;
     }
 
     .formulaire {
